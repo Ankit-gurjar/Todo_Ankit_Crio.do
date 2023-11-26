@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import React, { useCallback, useState } from "react";
 import Todos from "./Todo"; // Importing the Todos component
 
 const CallBackHook = () => {
@@ -41,8 +41,7 @@ const CallBackHook = () => {
           />
         </label>
       </form>
-      <hr />
-
+      <br />
       {/* Displaying the count and providing a button to increment it */}
       <div>
         Count : {count}
@@ -52,4 +51,4 @@ const CallBackHook = () => {
   );
 };
 
-export default CallBackHook;
+export default React.memo(CallBackHook);
