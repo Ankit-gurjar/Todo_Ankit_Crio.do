@@ -22,8 +22,7 @@ const CallBackHook = () => {
       // Updating the todos state with the new task
       setTodos((prev) => [...prev, `${task}`]);
     },
-    [task], // Dependency array for the callback, includes 'task'
-    [todos] // Additional dependency array, but this doesn't affect the callback
+    [setTodos] // Dependency array for the callback, includes 'setTodos'
   );
 
   return (
